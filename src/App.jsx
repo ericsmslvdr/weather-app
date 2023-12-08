@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { fetchCurrentWeather } from './services/api'
+import Footer from './components/Footer'
 
 function App() {
   const [location, setLocation] = useState("")
@@ -53,9 +54,8 @@ function App() {
           </form>
 
           {data == null
-            ? <>Search city</>
+            ? null
             : <>
-              <h1 className='text-xl'>Weather App</h1>
               <div className='bg-blue-400'>
                 <p>current weather:</p>
                 <p>{data.current.last_updated}</p>
@@ -87,15 +87,12 @@ function App() {
                     <p>pressure</p>
                     <p>{data.current.pressure_mb} mb / {data.current.pressure_in} inHg </p>
                   </div>
-                  {/* <div className='bg-green-200'>
-                    <p>dew point</p>
-                    <p>value</p>
-                  </div> */}
                 </div>
               </div>
             </>
           }
 
+          <Footer />
         </div >
       </div >
     </>
