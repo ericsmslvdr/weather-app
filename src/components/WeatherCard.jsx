@@ -18,7 +18,7 @@ const WeatherCard = ({ data }) => {
 
     return (
         <div className='bg-blue-400 rounded-lg p-4'>
-            <p className="text-slate-800 font-medium">Current weather:</p>
+            <p className="text-slate-800 font-medium">Current weather in {data.location.name}:</p>
             <p className="text-slate-700">{formattedDate}</p>
             <div className='flex gap-16'>
                 <div className="flex gap-2">
