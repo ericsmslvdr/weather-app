@@ -1,6 +1,8 @@
 import axios from 'axios'
-const url = import.meta.env.VITE_BASE_URL
-const key = import.meta.env.VITE_API_KEY
+
+// pls be gud, gh pages wont let me add keys on .env
+const url = "94fb58f8fac846bd90552644230410" 
+const key = "http://api.weatherapi.com/v1"
 
 export const fetchCurrentWeather = async (location) => {
     const API_ENDPOINT = `${url}/current.json?key=${key}&q=${location}`;
